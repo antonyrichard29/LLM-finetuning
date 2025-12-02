@@ -124,6 +124,9 @@ args = TrainingArguments(
     gradient_accumulation_steps=4,       # Accumulate gradients for 4 steps before updating weights (effective batch = 2×4=8)
     learning_rate=2e-4,                  # How fast the model learns (0.0002)
     fp16=True,                           # Use half-precision (faster, less memory, if GPU supports it)
+    bf16 = False,                        # Use bfloat16 (faster, less memory, if TPU supports it)
+    optim="adafactor",                   # AdamW causes fused errors on TPU
+    ddp_find_unused_parameters=False,    # Reduce TPU sync overhead
     logging_steps=10,                    # Log training progress every 10 steps
     save_steps=100,                      # Save a checkpoint every 100 steps
     save_total_limit=2,                  # Keep only the latest 2 checkpoints (older ones deleted)
@@ -139,6 +142,9 @@ trainer = Trainer(
 )
 
 trainer.train()
+
+# Move model to CPU before saving
+model.to("cpu") 
 
 model.save_pretrained("healthmate_finetuned")
 tokenizer.save_pretrained("healthmate_finetuned")
