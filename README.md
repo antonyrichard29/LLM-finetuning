@@ -3,22 +3,7 @@
 This is a lightweight medical symptom assistant created by fine-tuning the **TinyLlama-1.1B-Chat** language model using **LoRA (Low-Rank Adaptation)**.  
 The project demonstrates how a large language model can be adapted to provide basic health guidance using a small, curated dataset.
 
-⚠️ This project is for **educational purposes only** and does **not replace professional medical advice**.
-
----
-
-## 🚀 Features
-
-- Fine-tuned **TinyLlama-1.1B-Chat** using LoRA (PEFT)
-- Works on **CPU and GPU** (Google Colab compatible)
-- Handles common symptoms like fever, headache, cough, stomach pain, dizziness, etc.
-- Lightweight dataset (≈50 samples)
-- Efficient training with minimal compute resources
-- Interactive command-line interface for testing
-
----
-
-## 🧠 Model & Technique
+# Model & Technique
 
 - **Base Model:** TinyLlama-1.1B-Chat
 - **Fine-tuning Method:** LoRA (Parameter-Efficient Fine-Tuning)
