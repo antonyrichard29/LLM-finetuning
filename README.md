@@ -1,6 +1,6 @@
-# HealthMate – Medical Symptom Assistant (LLM Fine-Tuning)
+# Medical Symptom Assistant (LLM Fine-Tuning)
 
-HealthMate is a lightweight medical symptom assistant created by fine-tuning the **TinyLlama-1.1B-Chat** language model using **LoRA (Low-Rank Adaptation)**.  
+This is a lightweight medical symptom assistant created by fine-tuning the **TinyLlama-1.1B-Chat** language model using **LoRA (Low-Rank Adaptation)**.  
 The project demonstrates how a large language model can be adapted to provide basic health guidance using a small, curated dataset.
 
 ⚠️ This project is for **educational purposes only** and does **not replace professional medical advice**.
